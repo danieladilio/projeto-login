@@ -59,7 +59,6 @@ div#formulario>p{
 }
 form >div.campo{
   background-color: #5f2c82;
-  display: block;
   width: 100%;
   border-radius: 8px;
   height: 40px;
@@ -74,17 +73,31 @@ background-color: black;
 font-size: 2em;
 width: 40px;
 padding: 5px;
+position: relative;
 }
-div.campo>input{
-  background-color:#285554;
-  font-size: 1em;
-  height: 100%;
-  border:0px;
+
+div.campo {
+  background-color: #5f2c82;
+  display: flex; /* Ativa o alinhamento flexível */
+  align-items: center; /* Centraliza verticalmente */
+  padding: 5px; /* Espaçamento interno */
   border-radius: 8px;
-
-  padding: ;
-
+  width: 100%;
+  height: 40px;
+  margin: 5px 0;
 }
+
+div.campo > input {
+  background-color: #285554;
+  font-size: 1em;
+  width: calc(100 - 40px);
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  color: white;
+}
+
 form > input[type=submit] {
 display: block;
 font-size: 1em;
